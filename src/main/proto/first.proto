@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.test.grpc.first";
+option java_outer_classname = "FirstProto";
+option objc_class_prefix = "HLW";
+
+package first;
+
+// The greeting service definition.
+service FirstService {
+  // Sends a greeting
+  rpc test (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
